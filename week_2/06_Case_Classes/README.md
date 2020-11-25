@@ -42,8 +42,9 @@ The instances are different
 
 What do you notice?
 
-We will see here that the behavior of _case classes_ is different than _classes_. If you need the same semantic than _classes_, you can use the `eq` and `ne` methods. Both methods are based on reference comparison
+It's the same because in case classes, instances are compare on their values and not on their references.
 
+We will see here that the behavior of _case classes_ is different than _classes_. If you need the same semantic than _classes_, you can use the `eq` and `ne` methods. Both methods are based on reference comparison
 
 ### 3) New version
 
