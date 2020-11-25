@@ -4,6 +4,8 @@ import com.td.scala.adt._2.Browser
 
 object ReleaseManager {
 
-  def releaseVersion(currentBrowser: Browser, newVersion: Double): Browser = ???
+	def releaseVersion(currentBrowser: Browser, newVersion: Double): Browser = {
+		currentBrowser.copy(newVersion, currentBrowser.kind, currentBrowser.platform)
+	}
 
 }
