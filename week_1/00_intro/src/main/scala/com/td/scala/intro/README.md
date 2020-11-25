@@ -23,12 +23,15 @@ From the root of the repository
     - `sbt -java-home <PATH_JAVA_11>` with specific Java version
     - `sbt --java-home <PATH_JAVA_11>` some version require double dash
 
+cd "/mnt/c/Users/Nils Pernet/Documents/td_scala"
+sudo sbt --java-home "/usr/lib/jvm/java-11-openjdk-amd64"
+
 Note: under some Linux machines *<PATH_JAVA_11>* is `/usr/lib/jvm/java-11-openjdk-amd64`
 
 ### Typical Sbt structure
     build.sbt                               // the build description file
     project/                                // configuration of the build
-        build.properties                    // sbt.version
+        buildt.properies                    // sbt.version
         plugin.sbt                          // plugins for sbt (ex: scalafmt for formatting code)
     src/
         main/
