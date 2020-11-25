@@ -36,6 +36,9 @@ The instances are different
 
 What do you notice? What can we do to improve this behavior ? (What would you do in Java?)
 
+We notice that chrome1 is not equals to chrome2.
+It's because when we compare instances of class, scala compares references of instances and since chrome1 and chrome2 have not the same reference, they are not equals.
+In java we would have override the hascode & equals method of Browser class.
 
 ### 3) New version
 

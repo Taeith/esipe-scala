@@ -1,3 +1,16 @@
 package com.td.scala.classes
 
-object Main extends App {}
+object Main extends App {
+
+	val firefox1: Browser = Browser(1.0, "", Seq("Windows, MacOs, Linux"))
+	val opera1: Browser = Browser(0.4, "", Seq("MacOs"))
+	val chrome1: Browser = Browser(2.4, "", Seq("Windows, Linux"))
+	val chrome2: Browser = Browser(2.4, "", Seq("Windows, Linux"))
+
+	println(s"${firefox1.equals(chrome1)}")
+	println(s"${chrome2.equals(chrome1)}")
+
+	println(chrome1.toString())
+	println(chrome1.addMinorUpdate())
+
+}
