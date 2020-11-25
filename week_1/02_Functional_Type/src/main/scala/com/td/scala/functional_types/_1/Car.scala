@@ -1,19 +1,21 @@
 package com.td.scala.functional_types._1
 
-class Car(nbDoor: Int, var color: String, val nbPlaces: Int, var speed: Int = 0) {
+class Car(val nbDoor: Int, val color: String, val nbPlaces: Int, val speed: Int = 0) {
 
-  def speedUp(s: Int): Unit =
-    if (s <= 0) {
-      throw new IllegalArgumentException("Speed must be greater than 0")
-    } else {
-      speed = s + speed
+  def speedUp(value: Int): Either[Car, String] = {
+    value match {
+      case x if x >= 0 => Left(new Car(nbDoor, color, nbPlaces, speed + value))
+      case _ => Right("Value must be positive!")
     }
+  }
 
-  def brake(s: Int): Unit =
-    if (s >= 0) {
-      throw new IllegalArgumentException("Speed must be lower than 0")
-    } else {
-      speed = speed + s
+  def brake(value: Int): Either[Car, String] = {
+    value match {
+      case value if value > 0 => Left(new Car(nbDoor, color, nbPlaces, speed - value))
+      case _ => Right("Value must be positive!")
     }
+  }
+
+  override def toString: String = s"($nbDoor, $color, $nbPlaces, $speed)"
 
 }

@@ -8,12 +8,6 @@ object Main extends App {
 
   println(car1.color)
 
-  car1.speedUp(10)
-
-  println(car1.speed)
-
-  car1.brake(-8)
-
-  println(car1.speed)
+  println(s"${car1.speedUp(500).left.get.brake(100).toString}")
 
 }

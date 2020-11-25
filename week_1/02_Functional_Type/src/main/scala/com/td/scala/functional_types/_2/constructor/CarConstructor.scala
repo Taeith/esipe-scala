@@ -36,6 +36,10 @@ object CarConstructor {
     override val color: String = "Green"
   }
 
+  case object Blelow extends Color {
+    override val color: String = "Blelow"
+  }
+
   private val garage: Map[Int, Car] = Map[Int, Car](
     1 -> new Car(5, Blue, 4),
     2 -> new Car(2, Red, 3),

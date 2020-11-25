@@ -18,4 +18,6 @@ class Car(nbDoor: Int, val color: Color, val nbPlaces: Int, val speed: Int = 0) 
       Right(new Car(this.nbDoor, this.color, this.nbPlaces, speed + s))
     }
 
+    override def toString: String = s"($nbDoor, $color, $nbPlaces, $speed)"
+
 }
