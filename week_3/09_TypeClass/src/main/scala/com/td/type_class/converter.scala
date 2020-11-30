@@ -31,9 +31,12 @@ object converter {
   }
 
   object converters {
-
-    // TODO: Provide implicits converters Currency based on trait converter[A,B]
+    
+    implicit val EUR_TO_USD: Converter[Currency.EUR, Currency.USD] = (eur: Currency.EUR) => Currency.USD(eur.amount * 1.20)
+    implicit val USD_TO_EUR: Converter[Currency.USD, Currency.EUR] = (usd: Currency.USD) => Currency.EUR(usd.amount * 0.83)
 
   }
 
 }
+
+// TODO: Provide implicits converters Currency based on trait converter[A,B]
